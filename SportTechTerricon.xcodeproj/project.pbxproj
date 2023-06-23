@@ -7,18 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B6D99402A45ABD100EF4AAE /* RegistrationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D993F2A45ABD100EF4AAE /* RegistrationModel.swift */; };
+		5B6D995C2A45AFC800EF4AAE /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D995B2A45AFC800EF4AAE /* ApiRequest.swift */; };
+		5B6D995E2A45B2A200EF4AAE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D995D2A45B2A200EF4AAE /* Constants.swift */; };
+		5B6D99602A45B32800EF4AAE /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D995F2A45B32800EF4AAE /* TokenModel.swift */; };
+		5B6D99632A45BAED00EF4AAE /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D99622A45BAED00EF4AAE /* MainView.swift */; };
+		5B6D99652A45BC0100EF4AAE /* RegistrationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D99642A45BC0100EF4AAE /* RegistrationState.swift */; };
+		5B6D99672A45BF3100EF4AAE /* TransitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D99662A45BF3100EF4AAE /* TransitionView.swift */; };
+		5B6D99692A45C21E00EF4AAE /* CreateGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D99682A45C21E00EF4AAE /* CreateGameView.swift */; };
+		5B6D996B2A45C4A400EF4AAE /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D996A2A45C4A400EF4AAE /* ProfileView.swift */; };
+		5B6D996D2A45C4B500EF4AAE /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D996C2A45C4B500EF4AAE /* ProfileModel.swift */; };
+		5B6D996F2A45D41D00EF4AAE /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D996E2A45D41D00EF4AAE /* EventModel.swift */; };
+		5B6D99712A45D4C900EF4AAE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D99702A45D4C900EF4AAE /* LoginView.swift */; };
+		5B6D99732A45D52B00EF4AAE /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D99722A45D52B00EF4AAE /* LoginModel.swift */; };
 		5B7DE3A02A4327E500324F07 /* SportTechTerriconApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7DE39F2A4327E500324F07 /* SportTechTerriconApp.swift */; };
 		5B7DE3A22A4327E500324F07 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7DE3A12A4327E500324F07 /* ContentView.swift */; };
 		5B7DE3A42A4327EE00324F07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B7DE3A32A4327EE00324F07 /* Assets.xcassets */; };
 		5B7DE3A72A4327EE00324F07 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B7DE3A62A4327EE00324F07 /* Preview Assets.xcassets */; };
+		5B7DE3B12A432D3000324F07 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7DE3B02A432D3000324F07 /* RegistrationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B6D993F2A45ABD100EF4AAE /* RegistrationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationModel.swift; sourceTree = "<group>"; };
+		5B6D995B2A45AFC800EF4AAE /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
+		5B6D995D2A45B2A200EF4AAE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5B6D995F2A45B32800EF4AAE /* TokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
+		5B6D99612A45B64B00EF4AAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		5B6D99622A45BAED00EF4AAE /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		5B6D99642A45BC0100EF4AAE /* RegistrationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationState.swift; sourceTree = "<group>"; };
+		5B6D99662A45BF3100EF4AAE /* TransitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionView.swift; sourceTree = "<group>"; };
+		5B6D99682A45C21E00EF4AAE /* CreateGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGameView.swift; sourceTree = "<group>"; };
+		5B6D996A2A45C4A400EF4AAE /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		5B6D996C2A45C4B500EF4AAE /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		5B6D996E2A45D41D00EF4AAE /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
+		5B6D99702A45D4C900EF4AAE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		5B6D99722A45D52B00EF4AAE /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		5B7DE39C2A4327E500324F07 /* SportTechTerricon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportTechTerricon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B7DE39F2A4327E500324F07 /* SportTechTerriconApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportTechTerriconApp.swift; sourceTree = "<group>"; };
 		5B7DE3A12A4327E500324F07 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5B7DE3A32A4327EE00324F07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B7DE3A62A4327EE00324F07 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5B7DE3B02A432D3000324F07 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +80,10 @@
 		5B7DE39E2A4327E500324F07 /* SportTechTerricon */ = {
 			isa = PBXGroup;
 			children = (
+				5B6D99612A45B64B00EF4AAE /* Info.plist */,
+				5B7DE3AF2A432C2D00324F07 /* ViewModel */,
+				5B7DE3AE2A432C2600324F07 /* Model */,
+				5B7DE3AD2A432C2200324F07 /* View */,
 				5B7DE39F2A4327E500324F07 /* SportTechTerriconApp.swift */,
 				5B7DE3A12A4327E500324F07 /* ContentView.swift */,
 				5B7DE3A32A4327EE00324F07 /* Assets.xcassets */,
@@ -65,6 +98,41 @@
 				5B7DE3A62A4327EE00324F07 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5B7DE3AD2A432C2200324F07 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5B7DE3B02A432D3000324F07 /* RegistrationView.swift */,
+				5B6D99622A45BAED00EF4AAE /* MainView.swift */,
+				5B6D99662A45BF3100EF4AAE /* TransitionView.swift */,
+				5B6D99682A45C21E00EF4AAE /* CreateGameView.swift */,
+				5B6D996A2A45C4A400EF4AAE /* ProfileView.swift */,
+				5B6D99702A45D4C900EF4AAE /* LoginView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5B7DE3AE2A432C2600324F07 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5B6D993F2A45ABD100EF4AAE /* RegistrationModel.swift */,
+				5B6D995F2A45B32800EF4AAE /* TokenModel.swift */,
+				5B6D996C2A45C4B500EF4AAE /* ProfileModel.swift */,
+				5B6D996E2A45D41D00EF4AAE /* EventModel.swift */,
+				5B6D99722A45D52B00EF4AAE /* LoginModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5B7DE3AF2A432C2D00324F07 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5B6D995B2A45AFC800EF4AAE /* ApiRequest.swift */,
+				5B6D995D2A45B2A200EF4AAE /* Constants.swift */,
+				5B6D99642A45BC0100EF4AAE /* RegistrationState.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +205,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B6D996D2A45C4B500EF4AAE /* ProfileModel.swift in Sources */,
+				5B6D99632A45BAED00EF4AAE /* MainView.swift in Sources */,
+				5B6D99692A45C21E00EF4AAE /* CreateGameView.swift in Sources */,
+				5B6D99712A45D4C900EF4AAE /* LoginView.swift in Sources */,
+				5B7DE3B12A432D3000324F07 /* RegistrationView.swift in Sources */,
+				5B6D99732A45D52B00EF4AAE /* LoginModel.swift in Sources */,
+				5B6D996F2A45D41D00EF4AAE /* EventModel.swift in Sources */,
+				5B6D995C2A45AFC800EF4AAE /* ApiRequest.swift in Sources */,
+				5B6D996B2A45C4A400EF4AAE /* ProfileView.swift in Sources */,
+				5B6D99672A45BF3100EF4AAE /* TransitionView.swift in Sources */,
 				5B7DE3A22A4327E500324F07 /* ContentView.swift in Sources */,
+				5B6D995E2A45B2A200EF4AAE /* Constants.swift in Sources */,
+				5B6D99602A45B32800EF4AAE /* TokenModel.swift in Sources */,
+				5B6D99652A45BC0100EF4AAE /* RegistrationState.swift in Sources */,
 				5B7DE3A02A4327E500324F07 /* SportTechTerriconApp.swift in Sources */,
+				5B6D99402A45ABD100EF4AAE /* RegistrationModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +352,7 @@
 				DEVELOPMENT_TEAM = 4WBQDB82UY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SportTechTerricon/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +382,7 @@
 				DEVELOPMENT_TEAM = 4WBQDB82UY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SportTechTerricon/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

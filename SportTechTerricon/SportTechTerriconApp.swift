@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct SportTechTerriconApp: App {
+    @StateObject private var registrationState = RegistrationState()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TransitionView()
+                .environmentObject(registrationState)
+            
         }
     }
 }
