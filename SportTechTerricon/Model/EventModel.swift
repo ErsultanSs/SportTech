@@ -7,13 +7,14 @@
 
 import Foundation
 
-struct EventModel {
+struct EventModel: Encodable {
     var name: String
     var time_and_date: String
+    var place: String
     var expenditure: [ExpenditureModel]
 }
 
-struct ExpenditureModel {
+struct ExpenditureModel: Decodable, Encodable, Hashable {
     var name: String
     var cost: Int
 }

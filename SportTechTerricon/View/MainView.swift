@@ -12,12 +12,25 @@ struct MainView: View {
 
     var body: some View {
         TabView {
-            Text("Hello")
+            EventsView()
                 .tabItem {
                     Image(systemName: "globe")
                 }
             
+            CreateEventView()
+                .tabItem {
+                    Image(systemName: "plus")
+                }
             
+            Text("Invitation")
+                .tabItem {
+                    Image(systemName: "bell")
+                }
+            
+            ProfileView()
+                .tabItem {
+                    Image(systemName: "bell")
+                }
         }
     }
 }

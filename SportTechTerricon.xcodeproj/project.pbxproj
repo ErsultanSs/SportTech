@@ -14,12 +14,18 @@
 		5B6D99632A45BAED00EF4AAE /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D99622A45BAED00EF4AAE /* MainView.swift */; };
 		5B6D99652A45BC0100EF4AAE /* RegistrationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D99642A45BC0100EF4AAE /* RegistrationState.swift */; };
 		5B6D99672A45BF3100EF4AAE /* TransitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D99662A45BF3100EF4AAE /* TransitionView.swift */; };
-		5B6D99692A45C21E00EF4AAE /* CreateGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D99682A45C21E00EF4AAE /* CreateGameView.swift */; };
 		5B6D996B2A45C4A400EF4AAE /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D996A2A45C4A400EF4AAE /* ProfileView.swift */; };
 		5B6D996D2A45C4B500EF4AAE /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D996C2A45C4B500EF4AAE /* ProfileModel.swift */; };
 		5B6D996F2A45D41D00EF4AAE /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D996E2A45D41D00EF4AAE /* EventModel.swift */; };
 		5B6D99712A45D4C900EF4AAE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D99702A45D4C900EF4AAE /* LoginView.swift */; };
 		5B6D99732A45D52B00EF4AAE /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D99722A45D52B00EF4AAE /* LoginModel.swift */; };
+		5B6D99752A45F55A00EF4AAE /* CreateEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D99742A45F55A00EF4AAE /* CreateEventView.swift */; };
+		5B6D99772A45FAFC00EF4AAE /* EventResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D99762A45FAFC00EF4AAE /* EventResponseModel.swift */; };
+		5B6D997A2A46159100EF4AAE /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D99792A46159100EF4AAE /* EventsView.swift */; };
+		5B6D997C2A462FCE00EF4AAE /* EventByCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D997B2A462FCE00EF4AAE /* EventByCategoryModel.swift */; };
+		5B6D997E2A46521F00EF4AAE /* EntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D997D2A46521F00EF4AAE /* EntryView.swift */; };
+		5B6D99802A46DE1900EF4AAE /* EventInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D997F2A46DE1900EF4AAE /* EventInfoView.swift */; };
+		5B6D99822A46F0E100EF4AAE /* EventByIdModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D99812A46F0E100EF4AAE /* EventByIdModel.swift */; };
 		5B7DE3A02A4327E500324F07 /* SportTechTerriconApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7DE39F2A4327E500324F07 /* SportTechTerriconApp.swift */; };
 		5B7DE3A22A4327E500324F07 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7DE3A12A4327E500324F07 /* ContentView.swift */; };
 		5B7DE3A42A4327EE00324F07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B7DE3A32A4327EE00324F07 /* Assets.xcassets */; };
@@ -36,12 +42,18 @@
 		5B6D99622A45BAED00EF4AAE /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		5B6D99642A45BC0100EF4AAE /* RegistrationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationState.swift; sourceTree = "<group>"; };
 		5B6D99662A45BF3100EF4AAE /* TransitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionView.swift; sourceTree = "<group>"; };
-		5B6D99682A45C21E00EF4AAE /* CreateGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGameView.swift; sourceTree = "<group>"; };
 		5B6D996A2A45C4A400EF4AAE /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		5B6D996C2A45C4B500EF4AAE /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		5B6D996E2A45D41D00EF4AAE /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		5B6D99702A45D4C900EF4AAE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		5B6D99722A45D52B00EF4AAE /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		5B6D99742A45F55A00EF4AAE /* CreateEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventView.swift; sourceTree = "<group>"; };
+		5B6D99762A45FAFC00EF4AAE /* EventResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventResponseModel.swift; sourceTree = "<group>"; };
+		5B6D99792A46159100EF4AAE /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
+		5B6D997B2A462FCE00EF4AAE /* EventByCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventByCategoryModel.swift; sourceTree = "<group>"; };
+		5B6D997D2A46521F00EF4AAE /* EntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryView.swift; sourceTree = "<group>"; };
+		5B6D997F2A46DE1900EF4AAE /* EventInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventInfoView.swift; sourceTree = "<group>"; };
+		5B6D99812A46F0E100EF4AAE /* EventByIdModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventByIdModel.swift; sourceTree = "<group>"; };
 		5B7DE39C2A4327E500324F07 /* SportTechTerricon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportTechTerricon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B7DE39F2A4327E500324F07 /* SportTechTerriconApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportTechTerriconApp.swift; sourceTree = "<group>"; };
 		5B7DE3A12A4327E500324F07 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,6 +73,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B6D99782A46157200EF4AAE /* RegistrationViews */ = {
+			isa = PBXGroup;
+			children = (
+				5B6D99702A45D4C900EF4AAE /* LoginView.swift */,
+				5B6D99662A45BF3100EF4AAE /* TransitionView.swift */,
+				5B7DE3B02A432D3000324F07 /* RegistrationView.swift */,
+				5B6D997D2A46521F00EF4AAE /* EntryView.swift */,
+			);
+			path = RegistrationViews;
+			sourceTree = "<group>";
+		};
 		5B7DE3932A4327E400324F07 = {
 			isa = PBXGroup;
 			children = (
@@ -103,12 +126,12 @@
 		5B7DE3AD2A432C2200324F07 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5B7DE3B02A432D3000324F07 /* RegistrationView.swift */,
+				5B6D99782A46157200EF4AAE /* RegistrationViews */,
 				5B6D99622A45BAED00EF4AAE /* MainView.swift */,
-				5B6D99662A45BF3100EF4AAE /* TransitionView.swift */,
-				5B6D99682A45C21E00EF4AAE /* CreateGameView.swift */,
 				5B6D996A2A45C4A400EF4AAE /* ProfileView.swift */,
-				5B6D99702A45D4C900EF4AAE /* LoginView.swift */,
+				5B6D99742A45F55A00EF4AAE /* CreateEventView.swift */,
+				5B6D99792A46159100EF4AAE /* EventsView.swift */,
+				5B6D997F2A46DE1900EF4AAE /* EventInfoView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -121,6 +144,9 @@
 				5B6D996C2A45C4B500EF4AAE /* ProfileModel.swift */,
 				5B6D996E2A45D41D00EF4AAE /* EventModel.swift */,
 				5B6D99722A45D52B00EF4AAE /* LoginModel.swift */,
+				5B6D99762A45FAFC00EF4AAE /* EventResponseModel.swift */,
+				5B6D997B2A462FCE00EF4AAE /* EventByCategoryModel.swift */,
+				5B6D99812A46F0E100EF4AAE /* EventByIdModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -206,21 +232,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B6D996D2A45C4B500EF4AAE /* ProfileModel.swift in Sources */,
+				5B6D99752A45F55A00EF4AAE /* CreateEventView.swift in Sources */,
 				5B6D99632A45BAED00EF4AAE /* MainView.swift in Sources */,
-				5B6D99692A45C21E00EF4AAE /* CreateGameView.swift in Sources */,
 				5B6D99712A45D4C900EF4AAE /* LoginView.swift in Sources */,
 				5B7DE3B12A432D3000324F07 /* RegistrationView.swift in Sources */,
 				5B6D99732A45D52B00EF4AAE /* LoginModel.swift in Sources */,
 				5B6D996F2A45D41D00EF4AAE /* EventModel.swift in Sources */,
+				5B6D997E2A46521F00EF4AAE /* EntryView.swift in Sources */,
 				5B6D995C2A45AFC800EF4AAE /* ApiRequest.swift in Sources */,
 				5B6D996B2A45C4A400EF4AAE /* ProfileView.swift in Sources */,
+				5B6D997C2A462FCE00EF4AAE /* EventByCategoryModel.swift in Sources */,
+				5B6D99772A45FAFC00EF4AAE /* EventResponseModel.swift in Sources */,
 				5B6D99672A45BF3100EF4AAE /* TransitionView.swift in Sources */,
 				5B7DE3A22A4327E500324F07 /* ContentView.swift in Sources */,
+				5B6D99822A46F0E100EF4AAE /* EventByIdModel.swift in Sources */,
+				5B6D99802A46DE1900EF4AAE /* EventInfoView.swift in Sources */,
 				5B6D995E2A45B2A200EF4AAE /* Constants.swift in Sources */,
 				5B6D99602A45B32800EF4AAE /* TokenModel.swift in Sources */,
 				5B6D99652A45BC0100EF4AAE /* RegistrationState.swift in Sources */,
 				5B7DE3A02A4327E500324F07 /* SportTechTerriconApp.swift in Sources */,
 				5B6D99402A45ABD100EF4AAE /* RegistrationModel.swift in Sources */,
+				5B6D997A2A46159100EF4AAE /* EventsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

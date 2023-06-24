@@ -9,12 +9,13 @@ import SwiftUI
 
 struct TransitionView: View {
     @EnvironmentObject private var registrationState: RegistrationState
+    @AppStorage("RegisterTrans") var hasRegistered = false
     var body: some View {
         ZStack {
-            if registrationState.isRegistered {
+            if hasRegistered {
                 MainView()
             } else {
-                RegistrationView()
+                EntryView()
             }
         }
     }

@@ -12,7 +12,149 @@ struct APIRequest {
     let registerUrl = URL(string: "\(Constants.baseUrl)authentication/register")
     let getProfileUrl = URL(string: "\(Constants.baseUrl)user/me")
     let loginUrl = URL(string: "\(Constants.baseUrl)authentication/login")
+    let eventUrl = URL(string: "\(Constants.baseUrl)event")
+    let refreshUrl = URL(string: "\(Constants.baseUrl)authentication/refresh")
+    
+    
+    func getEventById(id: Int, completion: @escaping ((Result<EventByIdModel, Error>) -> Void)) {
+        let url = URL(string: "\(Constants.baseUrl)event/\(id)")
+        
+        do {
+            var urlRequest = URLRequest(url: url!)
+            urlRequest.httpMethod = "GET"
+            urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            if let token = UserDefaults.standard.string(forKey: "AuthToken") {
+                urlRequest.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+            }
+            
+            let task = URLSession.shared.dataTask(with: urlRequest) { data, response, error in
+                if let error = error {
+                    completion(.failure(error))
+                    print(error)
+                    return
+                }
+                
+                if let data = data {
+                    do {
+                        let response = try JSONDecoder().decode(EventByIdModel.self, from: data)
+                        completion(.success(response))
+                        print("success")
+                    } catch {
+                        completion(.failure(error))
+                        print(String(describing: error))
+                    }
+                }
+            }
+            
+            task.resume()
+            
+        }
+    }
+    func refreshToken() {
+        guard let refreshUrl = refreshUrl else { return }
+        do {
+            var urlRequest = URLRequest(url: refreshUrl)
+            urlRequest.httpMethod = "POST"
+            urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            if let token = UserDefaults.standard.string(forKey: "AuthToken") {
+                urlRequest.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+            }
+            
+            let task = URLSession.shared.dataTask(with: urlRequest) { data, _, _ in
+                
+                
+                if let data = data {
+                    do {
+                        let tokenModel = try JSONDecoder().decode(TokenModel.self, from: data)
+                        UserDefaults.standard.set(tokenModel.access_token, forKey: "AuthToken")
+                        print("Token is refreshed: \(tokenModel.access_token)")
+                    } catch {
+                        print(String(describing: error))
+                        print("Token is not refreshed")
+                    }
+                }
+            }
+            
+            task.resume()
+            
+        }
+    }
 
+    
+    func getEventByCategory(role: String, completion: @escaping ((Result<[EventByCategoryModel], Error>) -> Void)) {
+        let url = URL(string: "\(Constants.baseUrl)event/filter_by_role/\(role)")
+        
+        do {
+            var urlRequest = URLRequest(url: url!)
+            urlRequest.httpMethod = "GET"
+            urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            if let token = UserDefaults.standard.string(forKey: "AuthToken") {
+                urlRequest.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+            }
+            
+            let task = URLSession.shared.dataTask(with: urlRequest) { data, response, error in
+                if let error = error {
+                    completion(.failure(error))
+                    print(error)
+                    return
+                }
+                
+                if let data = data {
+                    do {
+                        let response = try JSONDecoder().decode([EventByCategoryModel].self, from: data)
+                        completion(.success(response))
+                        print("success")
+                    } catch {
+                        completion(.failure(error))
+                        print(String(describing: error))
+                    }
+                }
+            }
+            
+            task.resume()
+            
+        } catch {
+            completion(.failure(error))
+        }
+    }
+    
+    func createEvent(event: EventModel, completion: @escaping ((Result<EventResponseModel, Error>) -> Void)) {
+        guard let eventUrl = eventUrl else { return }
+        
+        do {
+            var urlRequest = URLRequest(url: eventUrl)
+            urlRequest.httpMethod = "POST"
+            urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            urlRequest.httpBody = try JSONEncoder().encode(event)
+            if let token = UserDefaults.standard.string(forKey: "AuthToken") {
+                urlRequest.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+            }
+            
+            let task = URLSession.shared.dataTask(with: urlRequest) { data, response, error in
+                if let error = error {
+                    completion(.failure(error))
+                    print(error.localizedDescription)
+                    return
+                }
+                
+                if let data = data {
+                    do {
+                        let response = try JSONDecoder().decode(EventResponseModel.self, from: data)
+                        completion(.success(response))
+                        print("\(response.message)")
+                    } catch {
+                        completion(.failure(error))
+                        print("error: \(error.localizedDescription)")
+                    }
+                }
+            }
+            
+            task.resume()
+            
+        } catch {
+            completion(.failure(error))
+        }
+    }
     
     func loginUser(user: LoginModel, completion: @escaping ((Result<TokenModel, Error>) -> Void)) {
         guard let loginUrl = loginUrl else { return }

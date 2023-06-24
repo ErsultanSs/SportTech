@@ -10,3 +10,8 @@ import Foundation
 enum Constants {
     static let baseUrl = "http://osaka.kz:4000/api/"
 }
+
+enum Role {
+    case organizator
+    case participant
+}
