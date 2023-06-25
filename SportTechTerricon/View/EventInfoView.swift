@@ -276,7 +276,7 @@ struct EventInfoView: View {
             )
         }
         .sheet(isPresented: $showPaySheet) {
-            PayView(value: payment_value)
+            PayView(value: payment_value, eventId: eventId)
         }
 
     }

@@ -235,7 +235,7 @@ struct APIRequest {
     
     func pay(eventId: Int,value: Double, completion: @escaping ((Result<EventResponseModel, Error>) -> Void)) {
         
-        let url = URL(string: "\(Constants.baseUrl)event/change-event-status/\(eventId)")
+        let url = URL(string: "\(Constants.baseUrl)bank/pay")
 
         
         do {
