@@ -15,7 +15,8 @@ struct EventByCategoryModel: Decodable, Hashable {
     var place: String
     var expenditure: [ExpenditureEventByCategoryModel]
     var total_expenditure: Int
-    var bank_account: [BankAccount]
+    var bank_account: BankAccount
+    
     
 }
 

@@ -126,26 +126,31 @@ struct CreateEventView: View {
     }
     
     private func createEvent() {
-        eventName = ""
-        eventPlace = ""
-        expenditureCost = ""
-        expenditureName = ""
+        
         
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
         
         let event = EventModel(name: eventName, time_and_date: formatter.string(from: eventDate), place: eventPlace, expenditure: expenditures)
         
-        APIRequest.shared.refreshToken()
         
         APIRequest.shared.createEvent(event: event) { result in
             switch result {
             case .success(_):
+                expenditures = [] 
                 showAlert = true
+                eventName = ""
+                eventPlace = ""
+                expenditureCost = ""
+                expenditureName = ""
+                
+                APIRequest.shared.refreshToken()
             case.failure(_):
                 print("error")
             }
         }
+        
+
     }
 }
 

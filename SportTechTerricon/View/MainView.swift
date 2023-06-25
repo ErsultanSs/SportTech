@@ -14,7 +14,7 @@ struct MainView: View {
         TabView {
             EventsView()
                 .tabItem {
-                    Image(systemName: "globe")
+                    Image(systemName: "list.bullet.rectangle.fill")
                 }
             
             CreateEventView()
@@ -29,7 +29,7 @@ struct MainView: View {
             
             ProfileView()
                 .tabItem {
-                    Image(systemName: "bell")
+                    Image(systemName: "person")
                 }
         }
     }

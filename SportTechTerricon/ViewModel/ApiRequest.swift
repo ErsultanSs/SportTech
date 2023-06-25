@@ -15,6 +15,76 @@ struct APIRequest {
     let eventUrl = URL(string: "\(Constants.baseUrl)event")
     let refreshUrl = URL(string: "\(Constants.baseUrl)authentication/refresh")
     
+    func validateToken(token: String, completion: @escaping ((Result<ValidateTokenModel, Error>) -> Void)) {
+        let url = URL(string: "\(Constants.baseUrl)event/validate-invite-token/\(token)")
+        
+        do {
+            var urlRequest = URLRequest(url: url!)
+            urlRequest.httpMethod = "GET"
+            urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            if let token = UserDefaults.standard.string(forKey: "AuthToken") {
+                urlRequest.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+            }
+            
+            let task = URLSession.shared.dataTask(with: urlRequest) { data, response, error in
+                if let error = error {
+                    completion(.failure(error))
+                    print(error)
+                    return
+                }
+                
+                if let data = data {
+                    do {
+                        let response = try JSONDecoder().decode(ValidateTokenModel.self, from: data)
+                        completion(.success(response))
+                        print("success")
+                    } catch {
+                        completion(.failure(error))
+                        print(String(describing: error))
+                    }
+                }
+            }
+            
+            task.resume()
+            
+        }
+    }
+
+    
+    func generateTokenById(id: Int, completion: @escaping ((Result<InviteTokenModel, Error>) -> Void)) {
+        let url = URL(string: "\(Constants.baseUrl)event/generate-invite-token/\(id)")
+        
+        do {
+            var urlRequest = URLRequest(url: url!)
+            urlRequest.httpMethod = "GET"
+            urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            if let token = UserDefaults.standard.string(forKey: "AuthToken") {
+                urlRequest.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+            }
+            
+            let task = URLSession.shared.dataTask(with: urlRequest) { data, response, error in
+                if let error = error {
+                    completion(.failure(error))
+                    print(error)
+                    return
+                }
+                
+                if let data = data {
+                    do {
+                        let response = try JSONDecoder().decode(InviteTokenModel.self, from: data)
+                        completion(.success(response))
+                        print("success")
+                    } catch {
+                        completion(.failure(error))
+                        print(String(describing: error))
+                    }
+                }
+            }
+            
+            task.resume()
+            
+        }
+    }
     
     func getEventById(id: Int, completion: @escaping ((Result<EventByIdModel, Error>) -> Void)) {
         let url = URL(string: "\(Constants.baseUrl)event/\(id)")
@@ -65,6 +135,9 @@ struct APIRequest {
                 
                 if let data = data {
                     do {
+                        if let token = UserDefaults.standard.string(forKey: "AuthToken") {
+                           print("old token: \(token)")
+                        }
                         let tokenModel = try JSONDecoder().decode(TokenModel.self, from: data)
                         UserDefaults.standard.set(tokenModel.access_token, forKey: "AuthToken")
                         print("Token is refreshed: \(tokenModel.access_token)")
@@ -117,6 +190,152 @@ struct APIRequest {
             completion(.failure(error))
         }
     }
+    
+    func exitEvent(eventId: Int, completion: @escaping ((Result<EventResponseModel, Error>) -> Void)) {
+        
+        let url = URL(string: "\(Constants.baseUrl)event/exit/\(eventId)")
+
+        
+        do {
+            var urlRequest = URLRequest(url: url!)
+            urlRequest.httpMethod = "POST"
+            urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            if let token = UserDefaults.standard.string(forKey: "AuthToken") {
+                urlRequest.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+            }
+            
+            
+          
+            
+            let task = URLSession.shared.dataTask(with: urlRequest) { data, response, error in
+                if let error = error {
+                    completion(.failure(error))
+                    print(error.localizedDescription)
+                    return
+                }
+                
+                if let data = data {
+                    do {
+                        let response = try JSONDecoder().decode(EventResponseModel.self, from: data)
+                        completion(.success(response))
+                        print("\(response.message)")
+                    } catch {
+                        completion(.failure(error))
+                        print("error exiting event: \(error.localizedDescription)")
+                    }
+                }
+            }
+            
+            task.resume()
+            
+        } catch {
+            completion(.failure(error))
+        }
+    }
+    
+    func pay(eventId: Int,value: Double, completion: @escaping ((Result<EventResponseModel, Error>) -> Void)) {
+        
+        let url = URL(string: "\(Constants.baseUrl)event/change-event-status/\(eventId)")
+
+        
+        do {
+            var urlRequest = URLRequest(url: url!)
+            urlRequest.httpMethod = "POST"
+            urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            if let token = UserDefaults.standard.string(forKey: "AuthToken") {
+                urlRequest.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+            }
+            let requestBody: [String: Any] = [
+                "event_id" : eventId,
+                "value": value
+                
+            ]
+            
+            do {
+                    let jsonData = try JSONSerialization.data(withJSONObject: requestBody, options: [])
+                    urlRequest.httpBody = jsonData
+                } catch {
+                    completion(.failure(error))
+                    return
+                }
+            
+            let task = URLSession.shared.dataTask(with: urlRequest) { data, response, error in
+                if let error = error {
+                    completion(.failure(error))
+                    print(error.localizedDescription)
+                    return
+                }
+                
+                if let data = data {
+                    do {
+                        let response = try JSONDecoder().decode(EventResponseModel.self, from: data)
+                        completion(.success(response))
+                        print("\(response.message)")
+                    } catch {
+                        completion(.failure(error))
+                        print("error changin event status: \(error.localizedDescription)")
+                    }
+                }
+            }
+            
+            task.resume()
+            
+        } catch {
+            completion(.failure(error))
+        }
+    }
+    
+    func changeEventStatus(eventId: Int,status: String, completion: @escaping ((Result<EventResponseModel, Error>) -> Void)) {
+        
+        let url = URL(string: "\(Constants.baseUrl)event/change-event-status/\(eventId)")
+
+        
+        do {
+            var urlRequest = URLRequest(url: url!)
+            urlRequest.httpMethod = "POST"
+            urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            if let token = UserDefaults.standard.string(forKey: "AuthToken") {
+                urlRequest.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+            }
+            let requestBody: [String: Any] = [
+                    "event_status": "\(status)"
+            
+            ]
+            
+            do {
+                    let jsonData = try JSONSerialization.data(withJSONObject: requestBody, options: [])
+                    urlRequest.httpBody = jsonData
+                } catch {
+                    completion(.failure(error))
+                    return
+                }
+            
+            let task = URLSession.shared.dataTask(with: urlRequest) { data, response, error in
+                if let error = error {
+                    completion(.failure(error))
+                    print(error.localizedDescription)
+                    return
+                }
+                
+                if let data = data {
+                    do {
+                        let response = try JSONDecoder().decode(EventResponseModel.self, from: data)
+                        completion(.success(response))
+                        print("\(response.message)")
+                    } catch {
+                        completion(.failure(error))
+                        print("error changin event status: \(error.localizedDescription)")
+                    }
+                }
+            }
+            
+            task.resume()
+            
+        } catch {
+            completion(.failure(error))
+        }
+    }
+
     
     func createEvent(event: EventModel, completion: @escaping ((Result<EventResponseModel, Error>) -> Void)) {
         guard let eventUrl = eventUrl else { return }

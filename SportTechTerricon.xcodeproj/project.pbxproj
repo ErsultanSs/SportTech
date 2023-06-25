@@ -26,6 +26,10 @@
 		5B6D997E2A46521F00EF4AAE /* EntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D997D2A46521F00EF4AAE /* EntryView.swift */; };
 		5B6D99802A46DE1900EF4AAE /* EventInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D997F2A46DE1900EF4AAE /* EventInfoView.swift */; };
 		5B6D99822A46F0E100EF4AAE /* EventByIdModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D99812A46F0E100EF4AAE /* EventByIdModel.swift */; };
+		5B6D99842A47235A00EF4AAE /* InviteTokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D99832A47235A00EF4AAE /* InviteTokenModel.swift */; };
+		5B6D99862A472A5F00EF4AAE /* VisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D99852A472A5F00EF4AAE /* VisualEffectView.swift */; };
+		5B6D99882A47315600EF4AAE /* ValidateTokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D99872A47315600EF4AAE /* ValidateTokenModel.swift */; };
+		5B6D998A2A483BE100EF4AAE /* PayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D99892A483BE100EF4AAE /* PayView.swift */; };
 		5B7DE3A02A4327E500324F07 /* SportTechTerriconApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7DE39F2A4327E500324F07 /* SportTechTerriconApp.swift */; };
 		5B7DE3A22A4327E500324F07 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7DE3A12A4327E500324F07 /* ContentView.swift */; };
 		5B7DE3A42A4327EE00324F07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B7DE3A32A4327EE00324F07 /* Assets.xcassets */; };
@@ -54,6 +58,10 @@
 		5B6D997D2A46521F00EF4AAE /* EntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryView.swift; sourceTree = "<group>"; };
 		5B6D997F2A46DE1900EF4AAE /* EventInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventInfoView.swift; sourceTree = "<group>"; };
 		5B6D99812A46F0E100EF4AAE /* EventByIdModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventByIdModel.swift; sourceTree = "<group>"; };
+		5B6D99832A47235A00EF4AAE /* InviteTokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteTokenModel.swift; sourceTree = "<group>"; };
+		5B6D99852A472A5F00EF4AAE /* VisualEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectView.swift; sourceTree = "<group>"; };
+		5B6D99872A47315600EF4AAE /* ValidateTokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateTokenModel.swift; sourceTree = "<group>"; };
+		5B6D99892A483BE100EF4AAE /* PayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayView.swift; sourceTree = "<group>"; };
 		5B7DE39C2A4327E500324F07 /* SportTechTerricon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportTechTerricon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B7DE39F2A4327E500324F07 /* SportTechTerriconApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportTechTerriconApp.swift; sourceTree = "<group>"; };
 		5B7DE3A12A4327E500324F07 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -132,6 +140,8 @@
 				5B6D99742A45F55A00EF4AAE /* CreateEventView.swift */,
 				5B6D99792A46159100EF4AAE /* EventsView.swift */,
 				5B6D997F2A46DE1900EF4AAE /* EventInfoView.swift */,
+				5B6D99852A472A5F00EF4AAE /* VisualEffectView.swift */,
+				5B6D99892A483BE100EF4AAE /* PayView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -147,6 +157,8 @@
 				5B6D99762A45FAFC00EF4AAE /* EventResponseModel.swift */,
 				5B6D997B2A462FCE00EF4AAE /* EventByCategoryModel.swift */,
 				5B6D99812A46F0E100EF4AAE /* EventByIdModel.swift */,
+				5B6D99832A47235A00EF4AAE /* InviteTokenModel.swift */,
+				5B6D99872A47315600EF4AAE /* ValidateTokenModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -236,16 +248,20 @@
 				5B6D99632A45BAED00EF4AAE /* MainView.swift in Sources */,
 				5B6D99712A45D4C900EF4AAE /* LoginView.swift in Sources */,
 				5B7DE3B12A432D3000324F07 /* RegistrationView.swift in Sources */,
+				5B6D99862A472A5F00EF4AAE /* VisualEffectView.swift in Sources */,
 				5B6D99732A45D52B00EF4AAE /* LoginModel.swift in Sources */,
 				5B6D996F2A45D41D00EF4AAE /* EventModel.swift in Sources */,
 				5B6D997E2A46521F00EF4AAE /* EntryView.swift in Sources */,
 				5B6D995C2A45AFC800EF4AAE /* ApiRequest.swift in Sources */,
+				5B6D99842A47235A00EF4AAE /* InviteTokenModel.swift in Sources */,
 				5B6D996B2A45C4A400EF4AAE /* ProfileView.swift in Sources */,
 				5B6D997C2A462FCE00EF4AAE /* EventByCategoryModel.swift in Sources */,
 				5B6D99772A45FAFC00EF4AAE /* EventResponseModel.swift in Sources */,
 				5B6D99672A45BF3100EF4AAE /* TransitionView.swift in Sources */,
 				5B7DE3A22A4327E500324F07 /* ContentView.swift in Sources */,
 				5B6D99822A46F0E100EF4AAE /* EventByIdModel.swift in Sources */,
+				5B6D998A2A483BE100EF4AAE /* PayView.swift in Sources */,
+				5B6D99882A47315600EF4AAE /* ValidateTokenModel.swift in Sources */,
 				5B6D99802A46DE1900EF4AAE /* EventInfoView.swift in Sources */,
 				5B6D995E2A45B2A200EF4AAE /* Constants.swift in Sources */,
 				5B6D99602A45B32800EF4AAE /* TokenModel.swift in Sources */,
@@ -390,6 +406,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -420,6 +437,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

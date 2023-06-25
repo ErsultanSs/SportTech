@@ -15,8 +15,10 @@ struct EventByIdModel: Decodable, Hashable {
     let place: String
     let expenditure: [ExpenditureEventByCategoryModel]
     let total_expenditure: Double
+    let event_status: String
     let bank_account: Bank_account
     let participants: [Participants]
+    let payment_value: Double
 }
 
 
@@ -31,4 +33,6 @@ struct Participants: Decodable, Hashable {
     let participant_email: String
     let participant_firstname: String
     let participant_lastname: String
+    let participant_is_paid: Bool
+    let participant_payment_value: Double
 }
